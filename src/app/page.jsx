@@ -27,22 +27,20 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex gap-5 flex-col min-h-screen items-center p-10">
-      <div className="flex gap-5 items-center justify-between w-full">
+    <div className="flex gap-16 flex-col min-h-screen items-center p-10">
+      <div className="flex items-center justify-between w-full">
         <div className="text-xl font-bold italic">Multiple Providers</div>
-        <div className="flex items-center gap-2">
-          <Switch
-            checked={darkMode}
-            onChange={handleDarkMode}
-            className="group inline-flex h-8 w-14 items-center rounded-full bg-black text-white transition data-[checked]:bg-black data-[checked]:dark:bg-white"
-          >
-            <span className="size-9 -translate-x-1 bg-white text-black flex items-center justify-center rounded-full transition group-data-[checked]:translate-x-6 font-bold dark:text-white dark:bg-black">
-              {darkMode ? <LuSunMedium /> : <FaMoon />}
-            </span>
-          </Switch>
-        </div>
+        <Switch
+          checked={darkMode}
+          onChange={handleDarkMode}
+          className="group inline-flex h-8 w-14 items-center rounded-full bg-black text-white transition data-[checked]:bg-black data-[checked]:dark:bg-white"
+        >
+          <span className="size-9 -translate-x-1 bg-white text-black flex items-center justify-center rounded-full transition group-data-[checked]:translate-x-6 font-bold dark:text-white dark:bg-black">
+            {darkMode ? <LuSunMedium /> : <FaMoon />}
+          </span>
+        </Switch>
       </div>
-      <div className="flex gap-5 pt-16">
+      <div className="flex gap-5">
         <ButtonMT
           props="Material Tailwind Button"
           color={darkMode ? "white" : "black"}
