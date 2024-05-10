@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@headlessui/react";
 
 export default function ButtonHeadlessUI({ props }) {
